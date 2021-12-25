@@ -19,20 +19,20 @@ namespace UnitTestLab2
 
 			}
 
-			QuickSort(arr, 0, 9);
+			QuickSort(array, 0, 9);
 
-			Assert::AreEqual(arr[0], 10);
-			Assert::AreEqual(arr[1], 20);
-			Assert::AreEqual(arr[2], 30);
-			Assert::AreEqual(arr[3], 40);
-			Assert::AreEqual(arr[4], 50);
-			Assert::AreEqual(arr[5], 60);
-			Assert::AreEqual(arr[6], 70);
-			Assert::AreEqual(arr[7], 80);
-			Assert::AreEqual(arr[8], 90);
-			Assert::AreEqual(arr[9], 100);
+			Assert::AreEqual(array[0], 10);
+			Assert::AreEqual(array[1], 20);
+			Assert::AreEqual(array[2], 30);
+			Assert::AreEqual(array[3], 40);
+			Assert::AreEqual(array[4], 50);
+			Assert::AreEqual(array[5], 60);
+			Assert::AreEqual(array[6], 70);
+			Assert::AreEqual(array[7], 80);
+			Assert::AreEqual(array[8], 90);
+			Assert::AreEqual(array[9], 100);
 
-			delete[] arr;
+			delete[] array;
 		}
 
 		TEST_METHOD(Test_BubbleSort)
@@ -47,16 +47,16 @@ namespace UnitTestLab2
 
 			BubbleSort(array, 10);
 
-			Assert::AreEqual(arr[0], 10);
-			Assert::AreEqual(arr[1], 20);
-			Assert::AreEqual(arr[2], 30);
-			Assert::AreEqual(arr[3], 40);
-			Assert::AreEqual(arr[4], 50);
-			Assert::AreEqual(arr[5], 60);
-			Assert::AreEqual(arr[6], 70);
-			Assert::AreEqual(arr[7], 80);
-			Assert::AreEqual(arr[8], 90);
-			Assert::AreEqual(arr[9], 100);
+			Assert::AreEqual(array[0], 10);
+			Assert::AreEqual(array[1], 20);
+			Assert::AreEqual(array[2], 30);
+			Assert::AreEqual(array[3], 40);
+			Assert::AreEqual(array[4], 50);
+			Assert::AreEqual(array[5], 60);
+			Assert::AreEqual(array[6], 70);
+			Assert::AreEqual(array[7], 80);
+			Assert::AreEqual(array[8], 90);
+			Assert::AreEqual(array[9], 100);
 
 			delete[] array;
 		}
@@ -66,7 +66,7 @@ namespace UnitTestLab2
 			int* array = new int[10];
 			array[0] = 100;
 			for (auto index = 1; index < 10; index++) {
-				arr[index] = 100 - (10 * (index));
+				array[index] = 100 - (10 * (index));
 			}
 			BogoSort(array, 10);
 
@@ -113,16 +113,16 @@ namespace UnitTestLab2
 			int* array = new int[10];
 			array[0] = 100;
 			for (auto index = 1; index < 10; index++) {
-				arr[index] = 100 - (10 * (index));
+				array[index] = 100 - (10 * (index));
 
 			}
 
-			BubbleSort(arr, 10);
+			BubbleSort(array, 10);
 
 			
-			Assert::AreEqual(BinarySearch(arr, 10, 10), 10);
-			Assert::AreEqual(BinarySearch(arr, 10, 20), 20);
-			Assert::AreEqual(BinarySearch(arr, 10, 100), 100);
+			Assert::AreEqual(BinarySearch(array, 10, 10), 10);
+			Assert::AreEqual(BinarySearch(array, 10, 20), 20);
+			Assert::AreEqual(BinarySearch(array, 10, 100), 100);
 
 			delete[] array;
 		}
